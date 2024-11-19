@@ -1,0 +1,460 @@
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+local Window = OrionLib:MakeWindow({Name = "Dummies Vs Noobs | 2024", HidePremium = false, IntroText = "Dummies Vs Noobs"})
+
+local function getPlayerCharacter()
+    return game.Players.LocalPlayer.Character or game.Players.LocalPlayer.CharacterAdded:Wait()
+end
+
+local Tab1 = Window:MakeTab({
+    Name = "Assault",
+    Icon = "rbxassetid://4483345998",
+    PremiumOnly = false
+})
+
+Tab1:AddButton({
+    Name = "Rifle",
+    Callback = function()
+        local character = getPlayerCharacter()
+        local weapon = character:FindFirstChild("Rifle")
+        
+        if weapon then
+            weapon:GetAttributeChangedSignal("Ammo"):Connect(function()
+                weapon:SetAttribute("Ammo", 9999)
+            end)
+
+            weapon:SetAttribute("Firerate", 9999)
+            weapon:SetAttribute("BulletSpeed", 9999)
+            weapon:SetAttribute("Cooldown", 9999)
+            weapon:SetAttribute("Spread", 0)
+        end    
+    end    
+})
+
+Tab1:AddButton({
+    Name = "Grenade Launcher",
+    Callback = function()
+        local character = getPlayerCharacter()
+        local weapon = character:FindFirstChild("Grenade Launcher")
+
+        if weapon then
+            weapon:GetAttributeChangedSignal("Ammo"):Connect(function()
+                weapon:SetAttribute("Ammo", 9999)
+            end)
+
+            weapon:SetAttribute("Firerate", 9999)
+            weapon:SetAttribute("BulletSpeed", 9999)
+            weapon:SetAttribute("Cooldown", 9999)
+            weapon:SetAttribute("Spread", 0)
+        end    
+    end    
+})
+
+Tab1:AddButton({
+    Name = "Shovel",
+    Callback = function()
+        local character = getPlayerCharacter()
+        local weapon = character:FindFirstChild("Shovel")
+
+        if weapon then
+            weapon:SetAttribute("Firerate", 9999)
+            weapon:SetAttribute("Cooldown", 0)
+        end    
+    end    
+})
+
+local Tab2 = Window:MakeTab({
+    Name = "Medic",
+    Icon = "rbxassetid://4483345998",
+    PremiumOnly = false
+})
+
+Tab2:AddButton({
+    Name = "Medical Bow",
+    Callback = function()
+        local character = getPlayerCharacter()
+        local weapon = character:FindFirstChild("Medical Bow")
+
+        if weapon then
+            weapon:GetAttributeChangedSignal("Ammo"):Connect(function()
+                weapon:SetAttribute("Ammo", 9999)
+            end)
+
+            weapon:SetAttribute("Firerate", 9999)
+            weapon:SetAttribute("BulletSpeed", 9999)
+            weapon:SetAttribute("Cooldown", 9999)
+            weapon:SetAttribute("Spread", 0)
+        end    
+    end    
+})
+
+Tab2:AddButton({
+    Name = "Shovel",
+    Callback = function()
+        local character = getPlayerCharacter()
+        local weapon = character:FindFirstChild("Shovel")
+
+        if weapon then
+            weapon:SetAttribute("Firerate", 9999)
+            weapon:SetAttribute("Cooldown", 0)
+        end    
+    end    
+})
+
+Tab2:AddButton({
+    Name = "Aidkit",
+    Callback = function()
+        local character = getPlayerCharacter()
+        local weapon = character:FindFirstChild("Aidkit")
+
+        if weapon then
+            weapon:SetAttribute("Firerate", 0)
+            weapon:SetAttribute("Cooldown", 0)
+        end    
+    end    
+})
+
+local Tab3 = Window:MakeTab({
+    Name = "Recon",
+    Icon = "rbxassetid://4483345998",
+    PremiumOnly = false
+})
+
+Tab3:AddButton({
+    Name = "DMR",
+    Callback = function()
+        local character = getPlayerCharacter()
+        local weapon = character:FindFirstChild("DMR")
+
+        if weapon then
+            weapon:GetAttributeChangedSignal("Ammo"):Connect(function()
+                weapon:SetAttribute("Ammo", 9999)
+            end)
+
+            weapon:SetAttribute("Firerate", 9999)
+            weapon:SetAttribute("BulletSpeed", 9999)
+            weapon:SetAttribute("Cooldown", 9999)
+            weapon:SetAttribute("Spread", 0)
+        end    
+    end    
+})
+
+Tab3:AddButton({
+    Name = "SMG",
+    Callback = function()
+        local character = getPlayerCharacter()
+        local weapon = character:FindFirstChild("SMG")
+
+        if weapon then
+            weapon:GetAttributeChangedSignal("Ammo"):Connect(function()
+                weapon:SetAttribute("Ammo", 9999)
+            end)
+
+            weapon:SetAttribute("Firerate", 9999)
+            weapon:SetAttribute("BulletSpeed", 9999)
+            weapon:SetAttribute("Cooldown", 9999)
+            weapon:SetAttribute("Spread", 0)
+        end    
+    end    
+})
+
+Tab3:AddButton({
+    Name = "Machete",
+    Callback = function()
+        local character = getPlayerCharacter()
+        local weapon = character:FindFirstChild("Machete")
+
+        if weapon then
+            weapon:SetAttribute("Firerate", 9999)
+            weapon:SetAttribute("Cooldown", 0)
+            weapon:SetAttribute("ThrowCooldown", 0)       
+        end    
+    end    
+})
+
+Tab3:AddButton({
+    Name = "FAST",
+    Callback = function()
+        local character = getPlayerCharacter()
+        local weapon = character:FindFirstChild("FAST")
+
+        if weapon then
+            weapon:SetAttribute("Firerate", 9999)
+            weapon:SetAttribute("Cooldown", 0)
+            weapon:SetAttribute("Limit", 100)       
+        end    
+    end    
+})
+
+local Tab4 = Window:MakeTab({
+    Name = "Engineer",
+    Icon = "rbxassetid://4483345998",
+    PremiumOnly = false
+})
+
+Tab4:AddButton({
+    Name = "Shotgun",
+    Callback = function()
+        local character = getPlayerCharacter()
+        local weapon = character:FindFirstChild("Shotgun")
+
+        if weapon then
+            weapon:GetAttributeChangedSignal("Ammo"):Connect(function()
+                weapon:SetAttribute("Ammo", 9999)
+            end)
+
+            weapon:SetAttribute("Firerate", 9999)
+            weapon:SetAttribute("BulletSpeed", 9999)
+            weapon:SetAttribute("Cooldown", 9999)
+            weapon:SetAttribute("Spread", 0)
+        end    
+    end    
+})
+
+Tab4:AddButton({
+    Name = "Machete",
+    Callback = function()
+        local character = getPlayerCharacter()
+        local weapon = character:FindFirstChild("Machete")
+
+        if weapon then
+            weapon:SetAttribute("Firerate", 9999)
+            weapon:SetAttribute("Cooldown", 0)
+            weapon:SetAttribute("ThrowCooldown", 0)       
+        end    
+    end    
+})
+
+Tab4:AddButton({
+    Name = "RPG",
+    Callback = function()
+        local character = getPlayerCharacter()
+        local weapon = character:FindFirstChild("RPG")
+
+        if weapon then
+            weapon:GetAttributeChangedSignal("Ammo"):Connect(function()
+                weapon:SetAttribute("Ammo", 9999)
+            end)
+
+            weapon:SetAttribute("Firerate", 9999)
+            weapon:SetAttribute("BulletSpeed", 9999)
+            weapon:SetAttribute("Cooldown", 9999)
+            weapon:SetAttribute("Spread", 0)
+        end    
+    end    
+})
+
+Tab4:AddButton({
+    Name = "PDC Kit",
+    Callback = function()
+        local character = getPlayerCharacter()
+        local weapon = character:FindFirstChild("PDC Kit")
+
+        if weapon then
+            weapon:SetAttribute("Firerate", 9999)
+            weapon:SetAttribute("Cooldown", 0)
+            weapon:SetAttribute("Limit", 100)       
+        end    
+    end    
+})
+
+Tab4:AddButton({
+    Name = "Barrier Kit",
+    Callback = function()
+        local character = getPlayerCharacter()
+        local weapon = character:FindFirstChild("Barrier Kit")
+
+        if weapon then
+            weapon:SetAttribute("Firerate", 9999)
+            weapon:SetAttribute("Cooldown", 0)
+            weapon:SetAttribute("Limit", 100)       
+        end    
+    end    
+})
+
+local Tab5 = Window:MakeTab({
+    Name = "Scout",
+    Icon = "rbxassetid://4483345998",
+    PremiumOnly = false
+})
+
+Tab5:AddButton({
+    Name = "Akimbo",
+    Callback = function()
+        local character = getPlayerCharacter()
+        local weapon = character:FindFirstChild("Akimbo")
+
+        if weapon then
+            weapon:GetAttributeChangedSignal("Ammo"):Connect(function()
+                weapon:SetAttribute("Ammo", 9999)
+            end)
+
+            weapon:SetAttribute("Firerate", 9999)
+            weapon:SetAttribute("BulletSpeed", 9999)
+            weapon:SetAttribute("Cooldown", 9999)
+            weapon:SetAttribute("Spread", 0)
+        end    
+    end    
+})
+
+Tab5:AddButton({
+    Name = "Jetpack",
+    Callback = function()
+        local character = getPlayerCharacter()
+        local weapon = character:FindFirstChild("Jetpack")
+
+        if weapon then
+            weapon:SetAttribute("Firerate", 9999)
+            weapon:SetAttribute("Cooldown", 0)
+            weapon:SetAttribute("Limit", 100)   
+        end    
+    end    
+})
+
+local Tab6 = Window:MakeTab({
+    Name = "Specialist",
+    Icon = "rbxassetid://4483345998",
+    PremiumOnly = false
+})
+
+Tab6:AddButton({
+    Name = "Burst Rifle",
+    Callback = function()
+        local character = getPlayerCharacter()
+        local weapon = character:FindFirstChild("Burst Rifle")
+
+        if weapon then
+            weapon:GetAttributeChangedSignal("Ammo"):Connect(function()
+                weapon:SetAttribute("Ammo", 9999)
+            end)
+
+            weapon:SetAttribute("Firerate", 9999)
+            weapon:SetAttribute("BulletSpeed", 9999)
+            weapon:SetAttribute("Cooldown", 9999)
+            weapon:SetAttribute("Spread", 0)
+        end    
+    end    
+})
+
+local Tab7 = Window:MakeTab({
+    Name = "Upgrades",
+    Icon = "rbxassetid://4483345998",
+    PremiumOnly = false
+})
+
+Tab7:AddParagraph("I'm too lazy to add more")
+
+Tab7:AddButton({
+    Name = "Harpoon Gun",
+    Callback = function()
+        local character = getPlayerCharacter()
+        local weapon = character:FindFirstChild("Harpoon Gun")
+
+        if weapon then
+            weapon:GetAttributeChangedSignal("Ammo"):Connect(function()
+                weapon:SetAttribute("Ammo", 9999)
+            end)
+
+            weapon:SetAttribute("Firerate", 9999)
+            weapon:SetAttribute("BulletSpeed", 9999)
+            weapon:SetAttribute("Cooldown", 9999)
+            weapon:SetAttribute("Spread", 0)
+        end    
+    end    
+})
+
+Tab7:AddButton({
+    Name = "Bolter",
+    Callback = function()
+        local character = getPlayerCharacter()
+        local weapon = character:FindFirstChild("Bolter")
+
+        if weapon then
+            weapon:GetAttributeChangedSignal("Ammo"):Connect(function()
+                weapon:SetAttribute("Ammo", 9999)
+            end)
+
+            weapon:SetAttribute("Firerate", 9999)
+            weapon:SetAttribute("BulletSpeed", 9999)
+            weapon:SetAttribute("Cooldown", 9999)
+            weapon:SetAttribute("Spread", 0)
+        end    
+    end    
+})
+
+Tab7:AddButton({
+    Name = "Intraplaner Device",
+    Callback = function()
+        local character = getPlayerCharacter()
+        local weapon = character:FindFirstChild("Intraplaner Device")
+
+        if weapon then
+            weapon:GetAttributeChangedSignal("Ammo"):Connect(function()
+                weapon:SetAttribute("Ammo", 9999)
+            end)
+
+            weapon:SetAttribute("Firerate", 9999)
+            weapon:SetAttribute("BulletSpeed", 9999)
+            weapon:SetAttribute("Cooldown", 9999)
+            weapon:SetAttribute("Spread", 0)
+        end    
+    end    
+})
+
+Tab7:AddButton({
+    Name = "Parabolic Hydra",
+    Callback = function()
+        local character = getPlayerCharacter()
+        local weapon = character:FindFirstChild("Parabolic Hydra")
+
+        if weapon then
+            weapon:GetAttributeChangedSignal("Ammo"):Connect(function()
+                weapon:SetAttribute("Ammo", 9999)
+            end)
+
+            weapon:SetAttribute("Firerate", 9999)
+            weapon:SetAttribute("BulletSpeed", 9999)
+            weapon:SetAttribute("Cooldown", 9999)
+            weapon:SetAttribute("Spread", 0)
+        end    
+    end    
+})
+
+Tab7:AddButton({
+    Name = "Recurve",
+    Callback = function()
+        local character = getPlayerCharacter()
+        local weapon = character:FindFirstChild("Recurve")
+
+        if weapon then
+            weapon:GetAttributeChangedSignal("Ammo"):Connect(function()
+                weapon:SetAttribute("Ammo", 9999)
+            end)
+
+            weapon:SetAttribute("Firerate", 9999)
+            weapon:SetAttribute("BulletSpeed", 9999)
+            weapon:SetAttribute("Cooldown", 9999)
+            weapon:SetAttribute("Spread", 0)
+        end    
+    end    
+})
+
+Tab7:AddButton({
+    Name = "Vitabow",
+    Callback = function()
+        local character = getPlayerCharacter()
+        local weapon = character:FindFirstChild("Vitabow")
+
+        if weapon then
+            weapon:GetAttributeChangedSignal("Ammo"):Connect(function()
+                weapon:SetAttribute("Ammo", 9999)
+            end)
+
+            weapon:SetAttribute("Firerate", 9999)
+            weapon:SetAttribute("BulletSpeed", 9999)
+            weapon:SetAttribute("Cooldown", 9999)
+            weapon:SetAttribute("Spread", 0)
+        end    
+    end    
+})
+
+OrionLib:Init()
